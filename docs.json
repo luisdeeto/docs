@@ -1,68 +1,84 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Deeto",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#6366F1",
+    "light": "#818CF8",
+    "dark": "#4F46E5"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Product guide",
         "groups": [
           {
             "group": "Getting started",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "quickstart"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Campaigns",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "campaigns/overview"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Knowledge Hub",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "knowledge-hub/overview"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Microsites",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "microsites/overview"
+            ]
+          },
+          {
+            "group": "Referral Hub",
+            "pages": [
+              "referral-hub/overview"
+            ]
+          },
+          {
+            "group": "Publishing",
+            "pages": [
+              "publishing/website-widget"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Integrations",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "CRM",
             "pages": [
-              "api-reference/introduction"
+              "integrations/hubspot",
+              "integrations/salesforce"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Revenue intelligence",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "integrations/gong"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Admin",
+        "groups": [
+          {
+            "group": "Account",
+            "pages": [
+              "admin/settings",
+              "admin/team-management",
+              "admin/billing"
             ]
           }
         ]
@@ -71,14 +87,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Support",
+          "href": "mailto:support@deeto.ai",
+          "icon": "envelope"
         }
       ]
     }
@@ -91,32 +102,18 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@deeto.ai"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Go to Deeto",
+      "href": "https://app.deeto.ai"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://linkedin.com/company/deeto"
     }
   }
 }
