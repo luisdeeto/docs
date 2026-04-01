@@ -164,5 +164,8 @@
     "socials": {
       "linkedin": "https://linkedin.com/company/deeto"
     }
+  },
+  "appearance": {
+    "strict": true
   }
 }
