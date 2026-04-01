@@ -1,8 +1,72 @@
 ---
 title: "Team management"
-description: "Manage users and permissions in Deeto."
+description: "Invite team members, assign roles, and manage access to your Deeto workspace."
 ---
 
-Invite team members, assign roles, and control who can access which features in your Deeto account.
+{/* Enriched from deeto-frontend (permissions system) + deeto-backend (VendorContactPrivileges) */}
+{/* Written: 2026-04-01 */}
 
-<Note>This page is coming soon. Content is being prepared.</Note>
+Manage who has access to your Deeto workspace and what they can do. Navigate to **Settings → User Management**.
+
+## Roles and permissions
+
+| Role | Access level |
+|---|---|
+| **Admin** | Full access — settings, integrations, team management, billing, all platform features |
+| **Manager** | Create and manage campaigns, view analytics, manage references and content |
+| **Rep** | Sales representative access — view references, manage prospects, use Deeto in CRM |
+| **Content Viewer** | Read-only access to Knowledge Hub content and saved views |
+| **Microsite Editor** | Create and edit microsites/destinations and widgets |
+
+<Note>Only admins can invite new team members, configure integrations, manage approval settings, and access billing.</Note>
+
+## Inviting team members
+
+<Steps>
+  <Step title="Go to User Management">
+    Navigate to **Settings → User Management**.
+  </Step>
+  <Step title="Click Invite">
+    Click **Invite Member** and enter the team member's email address.
+  </Step>
+  <Step title="Assign a role">
+    Select the appropriate role. You can change this later.
+  </Step>
+  <Step title="Send invitation">
+    The team member receives an email invitation to join your workspace.
+  </Step>
+</Steps>
+
+## Managing members
+
+From User Management, you can:
+
+- **Change roles** — Update a member's role as responsibilities change
+- **Remove access** — Remove team members who no longer need access
+- **View status** — See when members last logged in and their current role
+
+## What each role sees
+
+| Feature | Admin | Manager | Rep | Content Viewer | Microsite Editor |
+|---|---|---|---|---|---|
+| Knowledge Hub | Full | Full | View | View | View |
+| Campaigns | Full | Full | View | - | - |
+| Prospect Hub | Full | Full | Full | - | - |
+| Microsites/Widgets | Full | Full | View | - | Full |
+| Research Hub | Full | Full | View | - | - |
+| Platform Performance | Full | View | - | - | - |
+| Settings | Full | - | - | - | - |
+| Integrations | Full | - | - | - | - |
+
+## Best practices
+
+- **Start small** — Begin with 2-3 key users during onboarding, then expand as adoption grows
+- **Limit admin access** — Only people who need to manage settings and integrations
+- **Review quarterly** — Remove inactive users and update roles as teams change
+- **Use rep role for sales teams** — They need CRM-embedded access, not full platform control
+
+## SSO / SAML
+
+If your organization uses single sign-on, configure SAML so team members authenticate with their existing identity provider. See [Configure SAML with Okta](/admin/saml-okta).
+
+<Warning>SAML only authenticates existing Deeto users. It does not auto-create new users — you must invite them first.</Warning>

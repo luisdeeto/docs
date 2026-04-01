@@ -1,0 +1,63 @@
+---
+title: "Rewards FAQ"
+description: "Frequently asked questions about Deeto's rewards program — options, payments, fulfillment, and troubleshooting."
+---
+
+{/* Source: Notion "Deeto Rewards FAQ" (329cbf88..af7f, blank — GDoc source) */}
+{/* Enriched from deeto-frontend (RedeemRewards) + deeto-backend (rewards models) */}
+{/* Written: 2026-04-01 */}
+
+<AccordionGroup>
+  <Accordion title="What reward types are available?">
+    Deeto supports three reward types:
+    - **Gift cards** — Vendor-configured options (e.g., Amazon, Visa, Starbucks)
+    - **Charitable donations** — Donate points to selected causes
+    - **Custom rewards** — Vendor-specific options via custom URLs
+
+    Available options are configured by your vendor/admin. Not all types may be enabled.
+  </Accordion>
+
+  <Accordion title="How do references earn points?">
+    Points are awarded automatically when references complete qualifying activities:
+    - Submitting content (quotes, reviews, testimonials, case studies, videos)
+    - Having their content viewed by prospects
+    - Completing reference calls or meetings
+    - Participating in campaigns
+    - Completing custom activities (webinars, product feedback, etc.)
+
+    The number of points per activity is set by the admin in Settings.
+  </Accordion>
+
+  <Accordion title="Is there a minimum redemption amount?">
+    Yes — your admin configures a minimum redemption value. Points are redeemed in fixed increments (e.g., $5 steps). The maximum per transaction is typically 1,000 points unless configured otherwise.
+  </Accordion>
+
+  <Accordion title="How long does fulfillment take?">
+    Once a reference submits a redemption request:
+    1. The request enters **Pending** status
+    2. The admin or system processes the fulfillment
+    3. The reward is delivered and status changes to **Fulfilled**
+
+    Timing depends on the reward type and your organization's fulfillment process.
+  </Accordion>
+
+  <Accordion title="Can I change the rewards after launching?">
+    Yes. Admins can adjust point values per activity, add or remove gift card options, change minimum/maximum redemption amounts, and enable/disable donation options at any time. Changes apply to future earnings — already-earned points are not affected.
+  </Accordion>
+
+  <Accordion title="What happens if a reference's content is rejected?">
+    If submitted content is rejected during the approval process, the reward status is updated to **Revoked** and the points are removed from the reference's balance.
+  </Accordion>
+
+  <Accordion title="Can references see their reward history?">
+    Yes — references see their available balance, pending redemptions, and fulfilled rewards in the **Rewards** section of their Deeto portal.
+  </Accordion>
+
+  <Accordion title="How do I track rewards spending as an admin?">
+    Use [Platform Performance](/admin/platform-performance) → **Rewards** tab to see total points issued, redeemed, balances, popular reward types, and per-reference breakdowns.
+  </Accordion>
+
+  <Accordion title="Are rewards visible to all references?">
+    Rewards visibility is controlled by vendor settings. If `showAwards` or `showPromotionBannerPoints` is disabled, references won't see the Rewards section in their sidebar.
+  </Accordion>
+</AccordionGroup>

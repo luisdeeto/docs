@@ -1,8 +1,90 @@
 ---
 title: "Referral Hub"
-description: "Manage your customer referral program."
+description: "Create referral and affiliate programs, track leads, and manage referrers."
 ---
 
-The Referral Hub lets you run structured referral programs, track referrals, and reward advocates.
+{/* Source: deeto-frontend codebase (referral-hub pages) + deeto-backend (referral models) */}
+{/* Written: 2026-04-01 */}
 
-<Note>This page is coming soon. Content is being prepared.</Note>
+The Referral Hub lets you create referral and affiliate programs where your customers or brand supporters submit potential leads and get rewarded for qualified referrals.
+
+## Referral Hub tabs
+
+### Programs
+
+View and manage your referral programs. Each program card shows:
+
+- Program name and description
+- Status (online, offline, or archived)
+- KPI metrics and conversion tracking
+- Participant counts
+
+**Program types:**
+
+| Type | Description |
+|---|---|
+| **Referral** | Standard referral program — customers refer prospects they know |
+| **Affiliate** | Affiliate program — partners refer leads through trackable links |
+
+### Leads
+
+Track all referred prospects and their status through the qualification pipeline:
+
+| Status | Meaning |
+|---|---|
+| **New** | Lead just submitted |
+| **Qualified** | Lead meets qualification criteria |
+| **Won** | Lead converted to customer |
+| **Closed** | Lead closed (not converted) |
+| **Disqualified** | Lead didn't meet criteria |
+
+### Referrers
+
+Manage the people making referrals — view their profiles, referral performance metrics, and engagement history. You can also invite new affiliate partners from this tab.
+
+## Creating a referral program
+
+<Steps>
+  <Step title="Open Referral Hub">
+    Navigate to **Workflows → Referral Hub → Programs**.
+  </Step>
+  <Step title="Create a new program">
+    Click **Create referral program**. Set the program name, description, type (referral or affiliate), and eligibility criteria.
+  </Step>
+  <Step title="Configure fields">
+    Define which fields referrers and referees need to fill out. You can use standard fields or create custom fields per program.
+  </Step>
+  <Step title="Set up rewards">
+    Define what referrers receive when their leads reach specific statuses (qualified, won). See [Rewards](/rewards/overview) for reward configuration.
+  </Step>
+  <Step title="Design the landing page">
+    Customize the look and feel of your referral landing page — background, images, logos, and colors to match your brand.
+  </Step>
+  <Step title="Publish">
+    Set the program to **online** and share the link with your customers and partners.
+  </Step>
+</Steps>
+
+## Self-registration pages
+
+Self-registration pages are shareable links that let customers sign up as references without a direct invitation. To customize:
+
+1. Find the shareable link for your program
+2. Click **Edit look & feel**
+3. Customize background, image, logo, and visual elements
+4. Save and share the updated link
+
+<Tip>Share self-registration links in newsletters, post-purchase emails, customer community channels, or your website to scale your reference pool.</Tip>
+
+## Best practices
+
+- **Keep submission forms short** — More fields = fewer completions
+- **Communicate rewards clearly** — Referrers should know what they get and when
+- **Follow up on leads quickly** — Qualify referred leads promptly to keep referrers engaged
+- **Track ROI** — Monitor referral metrics in [Platform Performance](/admin/platform-performance) under the Leads tab
+
+## Related
+
+- [Rewards overview](/rewards/overview) — Configure rewards for referral programs
+- [Branding customization](/admin/branding) — Customize referral landing pages
+- [Platform Performance](/admin/platform-performance) — Track referral program metrics

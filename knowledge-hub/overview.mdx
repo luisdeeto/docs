@@ -1,8 +1,86 @@
 ---
 title: "Knowledge Hub"
-description: "Manage all your customer content and assets in one place."
+description: "Your centralized repository for all customer voice — content assets, people profiles, and company records."
 ---
 
-The Knowledge Hub is where all content collected through campaigns lives — testimonials, case studies, interview recordings, and more.
+{/* Source: https://www.notion.so/312cbf8837ec81ed8c64dd3bbc759086 (Modular Feature Doc) */}
+{/* Enriched from deeto-frontend codebase exploration */}
+{/* Written: 2026-04-01 */}
 
-<Note>This page is coming soon. Content is being prepared.</Note>
+The Knowledge Hub is the heart of Deeto — a centralized repository where all customer voice and participation activities come together. It's organized into three tabs: **Content**, **People**, and **Companies**.
+
+## Content (Assets)
+
+Browse and manage all customer-generated content in one place.
+
+**Content types stored:**
+
+| Type | Description |
+|---|---|
+| **Quotes** | Short customer endorsements |
+| **Reviews** | Detailed customer reviews |
+| **Case studies** | In-depth customer stories with rich formatting |
+| **Video testimonials** | Video content from references |
+| **Q&A** | Question-and-answer format content |
+| **G2 reviews** | Reviews synced from [G2](/integrations/g2) |
+| **Transcripts** | Call transcripts from [Gong](/integrations/gong) or AI interviews |
+| **PDFs** | Uploaded documents |
+| **URLs** | External links |
+| **Win/Loss reports** | Analysis reports from win/loss campaigns |
+| **Survey responses** | Structured survey data |
+
+**View modes:** Switch between Dashboard, List, and Table views depending on how you prefer to browse.
+
+**Filtering:** Filter content by type, industry, product, custom tags, sentiment, or date. Save complex filter combinations as **Saved Views** for quick reuse.
+
+## People
+
+Search and manage your references and customer contacts.
+
+- View reference profiles with complete engagement history
+- Filter by availability, engagement level, role, or company
+- Track participation across campaigns, meetings, and content contributions
+- See all content assets associated with each person
+
+## Companies
+
+Browse customer accounts at the organization level.
+
+- View company profiles with associated references and content
+- Filter by industry, company size, or engagement level
+- Track company-level engagement metrics
+- Identify high-value reference accounts
+
+## How content gets into the Knowledge Hub
+
+| Source | How it arrives |
+|---|---|
+| **Campaigns** | References submit content through [campaign](/campaigns/overview) contribution wizards |
+| **Gong** | Call transcripts [sync automatically](/integrations/gong) daily |
+| **G2** | Reviews [pull in automatically](/integrations/g2) via Auto-Sync |
+| **CRM** | Contact and company data syncs from [Salesforce](/integrations/salesforce) or [HubSpot](/integrations/hubspot) |
+| **Imported content** | Upload PDFs, URLs, and documents manually |
+| **AI interviews** | Transcripts and summaries from [AI interview campaigns](/campaigns/overview#ai-interview) |
+
+## Content approval workflow
+
+When references submit content, it can go through an approval workflow before becoming available:
+
+1. **Pending** — Content submitted, awaiting review
+2. **Approved** — Content reviewed and approved for use
+3. **Rejected** — Content doesn't meet quality standards
+
+<Note>Configure approval settings in **Settings → Approval Settings** to control which content types require review before publishing.</Note>
+
+## Best practices
+
+1. **Make it a daily habit** — Check the Knowledge Hub before customer meetings, content creation, or strategic planning
+2. **Use Saved Views** — Create views for common searches (e.g., "Enterprise quotes from last 90 days") so you don't have to rebuild filters each time
+3. **Use the AI Assistant** — Ask natural language questions instead of browsing manually. See [AI Assistant best practices](/ai-assistant/best-practices)
+4. **Keep profiles current** — Update customer records with role changes and new feedback
+
+## Related
+
+- [AI Assistant best practices](/ai-assistant/best-practices) — Query Knowledge Hub data with natural language
+- [Research Hub best practices](/research/best-practices) — Build research projects from Knowledge Hub data
+- [Getting started](/getting-started) — Connect data sources to populate your Knowledge Hub

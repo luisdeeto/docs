@@ -25,7 +25,10 @@
             "group": "Campaigns",
             "pages": [
               "campaigns/overview",
-              "campaigns/content-generation"
+              "campaigns/first-campaign",
+              "campaigns/content-generation",
+              "campaigns/dynamic-audiences",
+              "campaigns/ai-interviews"
             ]
           },
           {
@@ -43,6 +46,7 @@
           {
             "group": "AI Assistant",
             "pages": [
+              "ai-assistant/overview",
               "ai-assistant/best-practices"
             ]
           },
@@ -56,6 +60,13 @@
             "group": "Referral Hub",
             "pages": [
               "referral-hub/overview"
+            ]
+          },
+          {
+            "group": "Rewards",
+            "pages": [
+              "rewards/overview",
+              "rewards/faq"
             ]
           },
           {
@@ -74,6 +85,7 @@
             "group": "CRM",
             "pages": [
               "integrations/hubspot",
+              "integrations/hubspot-training",
               "integrations/salesforce",
               "integrations/salesforce-training"
             ]

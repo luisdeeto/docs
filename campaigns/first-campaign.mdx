@@ -1,0 +1,101 @@
+---
+title: "Create your first campaign"
+description: "Step-by-step guide to creating and launching your first Deeto campaign."
+---
+
+{/* Source: Notion "Campaigns Hub: First Campaign" (311cbf88..91d0, blank) */}
+{/* Enriched from deeto-frontend codebase (campaign creation flow) */}
+{/* Written: 2026-04-01 */}
+
+This guide walks you through creating your first campaign in Deeto. If you haven't already, read the [Campaign types overview](/campaigns/overview) to understand which type fits your goal.
+
+## Before you start
+
+Make sure you have:
+
+- Admin or Manager access to your Deeto workspace
+- At least one reference or a list of contacts to invite
+- A clear goal (recruit references, collect content, or broadcast a message)
+
+## Campaign creation flow
+
+<Steps>
+  <Step title="Navigate to Campaigns">
+    Go to **Workflows → Campaigns** and click **Create Campaign**.
+  </Step>
+  <Step title="Choose a campaign type">
+    Select the type that matches your goal:
+
+    | Goal | Campaign type |
+    |------|-------------|
+    | Recruit new references | **Reference Recruitment** |
+    | Collect testimonials from existing references | **Content Generation** |
+    | Send a one-time message | **Broadcasting to References** |
+    | Conduct AI-powered interviews | **AI Interview Agent** |
+    | Engage references in activities | **Activity Participation** |
+    | Grow referral program | **Referral Growth** |
+    | Create task assignments only | **Assignments Only** |
+  </Step>
+  <Step title="Set campaign details">
+    Fill in the **Details** step:
+    - **Name** — A descriptive name (e.g., "Q2 Reference Recruitment" or "Post-Renewal Content Collection")
+    - **Description** — What this campaign is for (internal reference)
+    - **Schedule** — When to activate and optional deactivation conditions
+  </Step>
+  <Step title="Define your audience">
+    In the **Audience** step:
+    - **Upload contacts** — Add a CSV or select from existing references
+    - **Segment** — Filter by industry, role, company size, or custom fields
+    - **Dynamic audience** — Optionally connect via API for CRM-triggered enrollment (see [Dynamic audiences](/campaigns/dynamic-audiences))
+  </Step>
+  <Step title="Configure messages">
+    In the **Messages** step:
+    - Write your email subject and body
+    - Set up a multi-step sequence (space emails by days)
+    - Use template variables for personalization (name, company, etc.)
+    - Preview before saving
+  </Step>
+  <Step title="Review and launch">
+    Review all settings. You can save as **Draft** to launch later, or activate immediately.
+  </Step>
+</Steps>
+
+## Campaign statuses
+
+After launching, your campaign moves through these stages:
+
+| Status | Meaning |
+|--------|---------|
+| **Draft** | Created but not yet launched |
+| **Scheduled** | Set to launch at a future date |
+| **Active** | Running — emails are going out |
+| **Stopped** | Paused manually |
+| **Ended** | Completion condition met automatically |
+| **Archived** | Closed out |
+
+## Recommended first campaigns
+
+<AccordionGroup>
+  <Accordion title="If you want quick wins">
+    Start with **Reference Recruitment** targeting customers who gave high NPS scores. Use a short, friendly email sequence (3 emails over 2 weeks). Goal: get 10-20 new references in your pool.
+  </Accordion>
+  <Accordion title="If you need content fast">
+    Run a **Content Generation** campaign targeting existing references. Ask for quotes or short testimonials. Include a reward incentive. Goal: collect 15+ content assets in 3 weeks.
+  </Accordion>
+  <Accordion title="If you want to test AI interviews">
+    Launch an **AI Interview** campaign with a small audience (10-15 references). Choose "First 30 days experience" or "Product feedback" as the topic. Review AI-generated summaries after a week.
+  </Accordion>
+</AccordionGroup>
+
+## Tips for success
+
+- **Keep email sequences to 3-4 emails** — More emails means more responses, but diminishing returns after 4
+- **Send from a familiar name** — Use a real person's name, not "noreply@company.com"
+- **Include a reward** — Even small incentives significantly boost participation
+- **Set a completion condition** — Auto-end the campaign when you hit your target number
+
+## Next steps
+
+- [Content generation best practices](/campaigns/content-generation) — Optimize your content campaigns
+- [Dynamic audiences](/campaigns/dynamic-audiences) — Connect your CRM for automated enrollment
+- [AI Interview campaigns](/campaigns/ai-interviews) — Run AI-powered interviews at scale

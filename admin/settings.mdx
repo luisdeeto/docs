@@ -1,8 +1,63 @@
 ---
 title: "Settings"
-description: "Configure your Deeto account."
+description: "Configure your Deeto workspace — company profile, branding, integrations, approvals, and more."
 ---
 
-Manage your account settings, including branding, email templates, and notification preferences.
+{/* Enriched from deeto-frontend codebase (Settings/routes.ts) */}
+{/* Written: 2026-04-01 */}
 
-<Note>This page is coming soon. Content is being prepared.</Note>
+Access Settings by clicking your profile image at the bottom left → **Settings**. Available options depend on your role.
+
+## Settings overview
+
+| Section | What you configure | Admin only? |
+|---|---|---|
+| **My Profile** | Your account information, photo, and contact details | No |
+| **Company Profile** | Organization name and details | Yes |
+| **Appearance** | UI theme and personalization | No |
+| **Customer-Facing Branding** | Logos, colors, fonts across microsites, emails, and widgets | Yes |
+| **User Management** | Invite members, assign roles, manage access | Yes |
+| **Connected Apps** | CRM and third-party integrations | Yes |
+| **Approval Settings** | Content review workflows and approver designations | Yes |
+| **Activities Management** | Core and custom activity types | Yes |
+| **Anonymous Settings** | How anonymous references are handled | Yes |
+| **Fields Management** | Custom field definitions (text, dropdown, multi-select, checkbox) | Yes |
+| **Field Mapping** | CRM field synchronization between Deeto and your CRM | Yes |
+| **Content Personalization** | Dynamic content rules for personalized experiences | Yes |
+| **Email Blacklist** | Block specific email addresses or domains | Yes |
+
+## Quick setup checklist
+
+If you're configuring Deeto for the first time:
+
+- [ ] Upload your company logo and set brand colors → [Branding](/admin/branding)
+- [ ] Invite your core team members → [Team management](/admin/team-management)
+- [ ] Connect your CRM → [HubSpot](/integrations/hubspot) or [Salesforce](/integrations/salesforce)
+- [ ] Connect data sources → [Gong](/integrations/gong), [G2](/integrations/g2)
+- [ ] Configure approval workflows (which content types need review)
+- [ ] Set up custom fields if needed for your reference profiles
+- [ ] Configure email blacklist for domains you don't want to contact
+- [ ] Set up SSO if required → [SAML with Okta](/admin/saml-okta)
+
+<Tip>For a complete onboarding walkthrough, see [Getting started with Deeto](/getting-started).</Tip>
+
+## Approval settings
+
+Control which content submissions require manual review:
+
+- **Approver designations** — Assign specific team members as content approvers
+- **Auto-approve rules** — Configure which content types skip review
+- **Pending items** — All content awaiting review appears in your Inbox under "Pending Assets"
+
+## Activities management
+
+Activities define the engagement types your references can participate in:
+
+- **Core activities** — System-defined engagement types (calls, content submission, meetings)
+- **Custom activities** — Create your own activity types (webinars, public speaking, product feedback sessions)
+
+Each activity can have associated [rewards](/rewards/overview) to incentivize participation.
+
+## Need help?
+
+Contact your Deeto CSM or email [support@deeto.ai](mailto:support@deeto.ai).

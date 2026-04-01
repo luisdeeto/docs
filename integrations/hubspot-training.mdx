@@ -1,0 +1,89 @@
+---
+title: "HubSpot training guide"
+description: "End-user guide for sales teams using Deeto within HubSpot — managing references, inviting prospects, and tracking engagement."
+---
+
+{/* Source: Notion "HubSpot Process Flow & Training" (31bcbf88..7568, blank — GDoc source) */}
+{/* Enriched from deeto-frontend + deeto-backend codebase */}
+{/* Written: 2026-04-01 */}
+
+This guide is for sales reps and AEs who use Deeto day-to-day within HubSpot. For admin setup instructions, see the [HubSpot Integration](/integrations/hubspot).
+
+## What you see in HubSpot
+
+After the integration is set up, you'll find Deeto embedded in your HubSpot records:
+
+- **In Deals** — View recommended references, invite prospects to reference experiences, track reference call status
+- **In Contacts** — See if a contact is a Deeto reference, their engagement history, and content they've contributed
+- **In Companies** — View all references associated with the account and their participation history
+- **Activity timeline** — Deeto events (reference calls, content submissions, prospect engagement) appear in HubSpot
+
+## Inviting a prospect to a reference experience
+
+When a prospect asks for a reference or you want to proactively offer one:
+
+<Steps>
+  <Step title="Open the deal in HubSpot">
+    Navigate to the deal record for the prospect you want to connect with references.
+  </Step>
+  <Step title="Open the Deeto tab">
+    Click on the **Deeto** tab within the deal record.
+  </Step>
+  <Step title="Click Invite Prospect">
+    Select **Invite Prospect** to start the matching process.
+  </Step>
+  <Step title="Select reference matches">
+    Choose the references you want to share. We recommend selecting **3 references** per prospect with a variety of content.
+  </Step>
+  <Step title="Personalize and send">
+    Add a personalized note for each reference. Confirm shared assets. Customize the email template and click **Send**.
+  </Step>
+</Steps>
+
+**What happens next:**
+
+1. Prospect receives a personalized page with your selected references
+2. Prospect chooses which reference(s) to connect with
+3. Prospect suggests time slots
+4. References receive the request and confirm times
+5. Calendar invites are sent automatically
+6. You receive call details and notes via email notification
+
+## Viewing Deeto data in HubSpot
+
+### In deal records
+
+The Deeto tab in deals shows:
+- **Recommended references** — Automatically matched based on prospect profile
+- **Reference call status** — Scheduled, completed, or pending
+- **Shared content** — Which assets were shared with the prospect
+- **Engagement metrics** — How the prospect interacted with references
+
+### In contact records
+
+For contacts who are Deeto references:
+- **Deeto ID** — Links the HubSpot contact to their Deeto profile
+- **Contribution history** — Content they've submitted
+- **Availability** — Whether they're available for calls
+
+## How data syncs
+
+| Direction | What syncs |
+|-----------|-----------|
+| **HubSpot → Deeto** | Contact details, company info, deal data, lifecycle events |
+| **Deeto → HubSpot** | Deeto ID on contacts/companies/deals, ticket objects for reference activities |
+
+Most syncs happen on demand (when you open the Deeto tab). A daily scheduled sync ensures completeness.
+
+## Best practices
+
+- **Be proactive** — Share relevant content ahead of calls, don't wait for prospects to ask
+- **Check Deeto before calls** — Review available references and content for the prospect's industry
+- **Use the activity timeline** — Deeto engagement events appear alongside your other HubSpot activities
+- **Coordinate with CS** — If a reference is getting too many requests, coordinate through Deeto to prevent burnout
+
+## Related
+
+- [HubSpot integration setup](/integrations/hubspot) — Admin configuration guide
+- [Salesforce training guide](/integrations/salesforce-training) — Equivalent guide for Salesforce users
+- [Microsites](/microsites/overview) — Personalized reference pages sent to prospects

@@ -1,0 +1,75 @@
+---
+title: "Dynamic audiences"
+description: "API-triggered campaign enrollment — connect your CRM or product to automatically add contacts to Deeto campaigns."
+---
+
+{/* Source: https://www.notion.so/31bcbf8837ec8199aa1bcc537f79c82e (Campaigns Setup Guide) */}
+{/* Written: 2026-04-01 */}
+
+Dynamic audiences let you automatically enroll contacts into Deeto campaigns from your CRM, marketing automation platform, or product — using a simple API call.
+
+## How it works
+
+Instead of manually uploading contacts, you configure a "signal" in your system (e.g., a Salesforce Flow or HubSpot Workflow) that sends an API call to Deeto when a triggering event occurs. Deeto then automatically enrolls the contact into the right campaign.
+
+**Example signals:**
+
+| Signal | Campaign to trigger |
+|--------|-------------------|
+| Opportunity closed-won | Post-win content collection |
+| Positive NPS score received | Reference recruitment |
+| 90 days after contract signing | First-quarter feedback interview |
+| Contract renewal | Long-term customer story collection |
+| Support ticket resolved positively | Testimonial request |
+
+## The API
+
+Deeto provides a generic API to submit contact details and trigger enrollment. The key components:
+
+- **Contact Information** — Reference's name and email address. Deeto automatically checks for duplicates:
+  - For **Reference Recruitment** — invites new references. Already-onboarded users won't be contacted again.
+  - For **Content Collection** — verifies they're existing references, then initiates a content request.
+- **Campaign ID** — Identifies which campaign to enroll the contact in. Multiple campaigns can run simultaneously.
+
+### Finding your API details
+
+1. Navigate to **Workflows → Campaigns**
+2. Select the campaign
+3. Click the **three-dot menu** (⋯)
+4. Click **"View dynamic audience API"**
+
+This shows the endpoint, required headers, and sample request body.
+
+## Connecting to the right campaign
+
+Each campaign is tailored to a specific business context. Your CRM should implement logic to route contacts to the right campaign:
+
+- **Segment-based routing** — Enterprise customers go to one campaign, SMB to another
+- **Event-based routing** — Closed-won triggers a different campaign than post-renewal
+- **Score-based routing** — High NPS sends to testimonial collection, low NPS to feedback interview
+
+<Tip>Start with one trigger and one campaign. Add complexity as you validate the flow works.</Tip>
+
+## Setup guides by platform
+
+| Platform | How to set up triggers |
+|----------|---------------------|
+| **Salesforce** | Create a Record-Triggered Flow. See [SFDC Campaign Enrollment](/integrations/sfdc-campaigns) for step-by-step instructions. |
+| **HubSpot** | Create a HubSpot Workflow with an HTTP action. See [HubSpot documentation](https://knowledge.hubspot.com/workflows/create-workflows) for workflow creation. |
+| **Custom / API** | Use any system that can make HTTP POST requests — your product, marketing tools, or custom scripts. |
+
+## Flow recommendations
+
+| Program goal | Recommended trigger |
+|-------------|-------------------|
+| **Positive feedback & marketing collateral** | Recent positive NPS scores |
+| **New customer feedback** | Time-based (90 days post-signing) |
+| **Long-term feedback** | Time-based (post-renewal) |
+| **Win/loss analysis** | Opportunity closed-won or closed-lost |
+| **Product-specific feedback** | Feature adoption milestone in your product |
+
+## Related
+
+- [SFDC Campaign Enrollment](/integrations/sfdc-campaigns) — Detailed Salesforce Flow setup
+- [Campaign types](/campaigns/overview) — Understanding each campaign type
+- [Create your first campaign](/campaigns/first-campaign) — Manual campaign creation walkthrough

@@ -1,0 +1,93 @@
+---
+title: "Rewards"
+description: "Configure and manage your reference rewards program — gift cards, donations, and point redemption."
+---
+
+{/* Source: Notion "Rewards: Overview & Best Practices" (311cbf88..8327, blank) */}
+{/* Enriched from deeto-frontend (RedeemRewards) + deeto-backend (rewards/redemptions models) */}
+{/* Written: 2026-04-01 */}
+
+The Rewards system incentivizes reference participation by awarding points for activities like submitting content, completing calls, and participating in campaigns. References redeem points for gift cards, charitable donations, or custom rewards.
+
+## How rewards work
+
+1. **You configure** which activities earn rewards and how many points each is worth
+2. **References earn points** automatically when they complete qualifying activities
+3. **References redeem** points through the Rewards section in their Deeto portal
+
+## Reward types
+
+| Reward type | Description |
+|---|---|
+| **Gift cards** | Vendor-configured gift card options with set values |
+| **Donations** | Charitable donations to causes you select |
+| **Custom rewards** | Custom gift card URLs or vendor-specific reward options |
+
+## Configuring rewards
+
+Navigate to **Settings** to configure your rewards program.
+
+### Activity rewards
+
+Define how many points each activity earns:
+
+| Activity type | Example point value |
+|---|---|
+| Content submitted (quote, review, testimonial) | 50-200 points |
+| Content viewed by a prospect | 10-25 points |
+| Meeting completed | 100-300 points |
+| Campaign participation | 50-100 points |
+| Custom activities (webinar, speaking, feedback) | Variable |
+
+<Tip>Start with generous rewards to build momentum, then adjust based on participation data.</Tip>
+
+### Redemption settings
+
+Configure redemption rules:
+
+- **Minimum redemption amount** — Set a floor for point redemptions
+- **Maximum per transaction** — Default cap of 1,000 points per redemption
+- **Step increments** — Points redeem in fixed increments (e.g., $5 steps)
+- **Gift card options** — Define which gift cards are available and their point values
+- **Donations** — Enable/disable charitable giving as a redemption option
+
+## What references see
+
+When a reference opens the Rewards section in their portal, they see:
+
+- **Available balance** — Points earned and available for redemption
+- **Gift card selector** — Browse available gift card options
+- **Redemption amount input** — Choose how many points to redeem (within min/max)
+- **Donation option** — If enabled, option to donate to charitable causes
+- **Redemption history** — Past redemptions and their status
+
+## Redemption statuses
+
+| Status | Meaning |
+|---|---|
+| **Pending** | Redemption submitted, awaiting fulfillment |
+| **Fulfilled** | Reward delivered to the reference |
+
+## Tracking rewards
+
+Monitor your rewards program in [Platform Performance](/admin/platform-performance) under the **Rewards** tab:
+
+- Total points issued and redeemed
+- Remaining balances per reference
+- Most popular reward types
+- Spending by activity type
+- Per-reference breakdown
+
+## Best practices
+
+- **Communicate rewards clearly** in campaign emails — references should know what they'll earn
+- **Offer variety** — Gift cards + donations appeals to different motivations
+- **Monitor burnout** — If top references earn a lot, ensure they're not being over-solicited
+- **Budget ahead** — Use Platform Performance to forecast redemption spending
+- **Review quarterly** — Adjust point values based on participation rates
+
+## Related
+
+- [Platform Performance](/admin/platform-performance) — Track rewards metrics
+- [Campaign types](/campaigns/overview) — Campaigns that trigger rewards
+- [Referral Hub](/referral-hub/overview) — Rewards for referral programs

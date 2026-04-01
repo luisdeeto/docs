@@ -1,0 +1,86 @@
+---
+title: "AI Interview campaigns"
+description: "Run AI-powered interviews at scale — structured conversations that adapt based on responses."
+---
+
+{/* Source: Notion "Best Practice Guide — AI Interviews" (32ccbf88..448c, blank) */}
+{/* Enriched from deeto-backend (automation briefs) + deeto-frontend (campaign types) */}
+{/* Written: 2026-04-01 */}
+
+AI Interview campaigns use Deeto's AI agent to conduct structured interviews with your references. The AI handles the conversation automatically — asking questions, following up, and capturing responses — without you needing to be present.
+
+## When to use AI Interviews
+
+- You want **detailed, interview-style feedback** at scale
+- You need to understand the **"why" behind patterns** in your data
+- You want to fill **data gaps** identified by [Research Hub](/research/best-practices) analysis
+- You need **consistent data collection** across many references
+
+## Topic scopes
+
+When creating an AI Interview campaign, choose a topic that focuses the conversation:
+
+| Topic scope | Best for | Example research question |
+|---|---|---|
+| **Win/Loss analysis** | Understanding deal outcomes | "Why did the customer choose us over [competitor]?" |
+| **Loss analysis** | Deep dive into lost deals | "What were the key factors in choosing another solution?" |
+| **New product feedback** | Post-launch feedback | "How has [feature] changed your daily workflow?" |
+| **First 30 days experience** | Onboarding quality | "What surprised you most about implementation?" |
+| **Pre-renewal** | Retention signals | "What would make you hesitate to renew?" |
+| **NPS / follow-up feedback** | Score context | "You gave us a 7 — what would make it a 9?" |
+| **Retention analysis** | Churn prevention | "What keeps you using the platform daily?" |
+| **Product-specific feedback** | Feature deep-dive | "Walk me through how you use [feature]" |
+
+## Setting up an AI Interview campaign
+
+<Steps>
+  <Step title="Create the campaign">
+    Go to **Workflows → Campaigns → Create Campaign** and select **AI Interview Agent**.
+  </Step>
+  <Step title="Choose the topic scope">
+    Select one of the topic scopes above. This determines the AI's conversation direction and follow-up questions.
+  </Step>
+  <Step title="Define your audience">
+    Select which references to interview. For best results, target a specific segment rather than your entire base.
+  </Step>
+  <Step title="Configure the email invitation">
+    Write the email that invites references to participate. Mention the estimated time (typically 10-15 minutes) and any rewards.
+  </Step>
+  <Step title="Launch">
+    Activate the campaign. References receive the invitation and can start their AI interview at any time.
+  </Step>
+</Steps>
+
+## How the AI interview works (reference perspective)
+
+1. Reference clicks the interview link from the email
+2. AI greets them and explains the purpose
+3. AI asks open-ended questions based on the chosen topic
+4. AI follows up based on responses — probing deeper where interesting signals appear
+5. Interview is automatically transcribed and summarized
+6. Transcript and summary appear in your [Knowledge Hub](/knowledge-hub/overview)
+
+## What you get from AI Interviews
+
+| Output | Where to find it |
+|--------|-----------------|
+| **Full transcript** | Knowledge Hub → Content → Transcripts |
+| **AI summary** | Attached to the transcript as a summary card |
+| **Key quotes** | Automatically extracted and tagged |
+| **Sentiment analysis** | Tagged on the transcript content object |
+
+## Best practices
+
+- **Start small** — Run your first AI interview with 10-15 references to validate the experience
+- **Be specific with topic scope** — "Product-specific feedback" with a named feature produces better results than "general"
+- **Time it right** — Post-implementation (30-60 days) and pre-renewal are the highest-signal moments
+- **Combine with Research Hub** — Use AI Interview results to fill gaps identified by [research projects](/research/best-practices)
+- **Offer incentives** — Reward participation to improve response rates
+
+<Tip>Launch a targeted AI Interview campaign at the midpoint of a Research Hub project. The first-half findings tell you exactly what questions to ask.</Tip>
+
+## Related
+
+- [Campaign types](/campaigns/overview) — Overview of all campaign types
+- [Research Hub best practices](/research/best-practices) — Using interview data in research projects
+- [Create your first campaign](/campaigns/first-campaign) — Step-by-step campaign creation
