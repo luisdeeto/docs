@@ -1,8 +1,98 @@
 ---
 title: "Gong"
-description: "Connect Deeto with Gong revenue intelligence."
+description: "Connect Gong call intelligence to your Deeto Knowledge Hub — authorization, configuration, sync schedule, and the auto-created Potential References campaign."
 ---
 
-Integrate Gong to pull insights from sales calls and enrich your reference profiles automatically.
+{/* Source: https://www.notion.so/320cbf8837ec811e9264c6e1e3b150ea */}
+{/* Migrated: 2026-04-01 from Deeto Docs Hub Tracker */}
 
-<Note>This page is coming soon. Content is being prepared.</Note>
+The Gong integration pulls call transcripts directly into your Deeto Knowledge Hub. Once connected, Deeto syncs call data daily — giving your team a searchable library of customer voice from real conversations, updated automatically.
+
+## Who this is for
+
+Platform admins and RevOps teams connecting Gong conversation intelligence to Deeto for automated call transcript ingestion.
+
+## What you'll learn
+
+- Connect your Gong account in seven steps
+- Configure which call data Deeto pulls
+- Understand the sync schedule and where transcripts appear
+- Activate the auto-created Potential References campaign
+
+## Part 1: Connect Gong to Deeto
+
+<Steps>
+  <Step title="Go to Settings">
+    Navigate to **Settings** in your Deeto platform.
+  </Step>
+  <Step title="Open Integrations">
+    Open the **Integrations** section within Settings.
+  </Step>
+  <Step title="Find Gong">
+    Hover over the **Gong** tile in your integrations list.
+  </Step>
+  <Step title="Click Connect">
+    Select **Connect** in the upper right corner of the Gong tile.
+  </Step>
+  <Step title="Log in to Gong">
+    You'll be redirected to Gong. Sign in with your credentials.
+  </Step>
+  <Step title="Accept terms">
+    Review and accept the authorization terms to grant Deeto access.
+  </Step>
+  <Step title="Integration connected">
+    You'll be returned to Deeto. Gong is now connected.
+  </Step>
+</Steps>
+
+## Part 2: Configure your Gong fields
+
+Once connected, configure which data Deeto pulls:
+
+<Steps>
+  <Step title="Open Gong settings">
+    Navigate back to **Integrations** and click on the Gong integration.
+  </Step>
+  <Step title="Filter your fields">
+    Set up field filters based on the Gong environment you want to pull from — call types, filters, and data fields.
+  </Step>
+  <Step title="Set your start date">
+    Choose the beginning date for your sync. This can be a past date — Deeto will pull transcripts retroactively from that point forward.
+  </Step>
+  <Step title="Save">
+    Save your configuration. Deeto begins syncing daily.
+  </Step>
+</Steps>
+
+<Note>The date you set is the starting point for your data sync. Deeto pulls all available transcripts from that date, including historical ones. After the initial sync, new calls are captured automatically every day.</Note>
+
+## Where to find your call transcripts
+
+Once synced, all Gong call transcripts are available in:
+
+- **Knowledge Hub** — Main hub for all synced customer intelligence
+- **Assets → Captured** — All Gong call transcripts appear here. Browse, search, and activate transcript content directly
+
+## Sync schedule
+
+- **First sync** — Pulls all transcripts from your configured start date, including historical calls
+- **Ongoing sync** — New calls captured and added daily
+
+## Potential References campaign
+
+When the Gong integration is set up, Deeto automatically creates a **Potential References** campaign in your Campaigns tab.
+
+- **Default status:** Deactivated (won't run until you manually activate it)
+- **How it works:** Deeto analyzes call sentiment and automatically adds reference details for customers showing positive signals — no manual curation needed
+
+## Best practices
+
+- **Start with a recent date** — Begin with the last 90 days of calls. Extend later once you've validated the data flow
+- **Review Captured assets weekly** — Make reviewing and activating high-value content a weekly habit
+- **Activate the Potential References campaign** — Turn it on once your team is ready to act on sentiment-flagged customers
+
+## Related articles
+
+- [Knowledge Hub Overview](/knowledge-hub/overview)
+- [Campaign Types](/campaigns/overview)
+- [Platform Performance](/admin/platform-performance)

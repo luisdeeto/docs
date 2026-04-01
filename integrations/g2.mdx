@@ -1,0 +1,85 @@
+---
+title: "G2 Auto-Sync"
+description: "Connect your G2 account to sync reviews into Deeto automatically — no API keys or manual setup required."
+---
+
+{/* Source: https://www.notion.so/31bcbf8837ec819693dedb6560d01396 */}
+{/* Migrated: 2026-04-01 from Deeto Docs Hub Tracker */}
+
+The G2 Auto-Sync integration automatically pulls reviews from your G2 profile and syncs them into your Deeto Knowledge Hub. This gives you a unified repository of all customer voice — both first-party and third-party reviews.
+
+## What you get
+
+With G2 Auto-Sync enabled, Deeto will:
+
+- Automatically import all reviews from your G2 profile
+- Extract customer names, companies, and review text
+- Tag reviews by industry, company size, and sentiment
+- Create searchable customer profiles in your Knowledge Hub
+- Keep reviews in sync as new ones are posted on G2
+- Generate campaigns to request new G2 reviews from existing customers
+
+## Prerequisites
+
+- Active Deeto workspace
+- G2 profile with existing reviews
+- G2 account login credentials
+
+## Setup steps
+
+<Steps>
+  <Step title="Connect your G2 account">
+    Log in to Deeto as an administrator. Navigate to **Settings → Integrations**. Find the **G2** tile and click **Connect**.
+  </Step>
+  <Step title="Authorize Deeto">
+    You'll be redirected to G2. Log in, review permissions, and click **Authorize**. You'll be redirected back to Deeto.
+  </Step>
+  <Step title="Select your G2 profile">
+    If you manage multiple G2 profiles, select the one you want to sync. Confirm and click **Confirm and Sync**.
+  </Step>
+  <Step title="Wait for initial sync">
+    The first sync may take a few minutes depending on your review volume. You'll see a progress indicator.
+  </Step>
+  <Step title="Configure review campaigns (optional)">
+    Navigate to **Campaigns**, create a **G2 Review Request** campaign, and target high-NPS or long-term customers.
+  </Step>
+</Steps>
+
+## How it works
+
+**Initial sync** — Deeto pulls all existing G2 reviews, reviewer names, companies, review text, ratings, and dates.
+
+**Ongoing sync** — After setup, Deeto checks for new reviews daily and adds them to your Knowledge Hub automatically.
+
+**Search and use** — Once synced, you can search reviews in the Knowledge Hub, filter by industry/company size/rating, create microsites using G2 reviews, use reviews in your widget, and share quotes with your sales team.
+
+## What reviews can be used for
+
+| Team | Use cases |
+|------|-----------|
+| **Sales** | Battle cards with competitive proof, one-sheets, quotes for prospects |
+| **Marketing** | Website widget display, case studies, social media testimonials |
+| **Product** | Feature feedback, pain point identification, roadmap prioritization |
+| **Customer Success** | Share positive reviews with accounts, track sentiment, find advocates |
+
+## Best practices
+
+- **Proactively request reviews** — Use Deeto campaigns to ask customers to review on G2
+- **Timing matters** — Request reviews after successful implementations or positive interactions
+- **Monitor sentiment** — Track how your reviews and ratings trend over time
+- **Use in sales** — Share high-star reviews with prospects in late-stage deals
+
+<Warning>Ensure any incentives for G2 reviews comply with G2's policies. Don't offer incentives based on review rating or content.</Warning>
+
+## Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| Reviews not showing up | Verify the integration is active in Settings. Allow 24 hours for initial sync. |
+| New reviews not syncing | Check your G2 profile is public and reviews are visible. Verify the integration is still active. |
+| Can't authorize with G2 | Verify your G2 login credentials. Clear browser cache and cookies. |
+
+## Managing your integration
+
+- **Disconnect:** Settings → Integrations → G2 → Disconnect. Existing reviews remain in the Knowledge Hub.
+- **Re-sync:** Settings → Integrations → G2 → Refresh Sync to pull any missed reviews.

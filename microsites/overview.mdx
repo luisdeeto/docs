@@ -1,8 +1,64 @@
 ---
 title: "Microsites"
-description: "Create personalized reference pages for your sales prospects."
+description: "Create personalized reference pages for your sales prospects — automated through CRM triggers or sent manually."
 ---
 
-Microsites are branded, shareable pages that showcase your customer references tailored to a specific prospect or deal.
+{/* Source: https://www.notion.so/312cbf8837ec813baec9eab533f993ec */}
+{/* Migrated: 2026-04-01 from Deeto Docs Hub Tracker */}
 
-<Note>This page is coming soon. Content is being prepared.</Note>
+Microsites are branded, shareable pages that showcase your customer references tailored to a specific prospect or deal. They can be sent manually or triggered automatically from your CRM.
+
+## Overview
+
+Deeto allows you to automatically send prospects to a personalized microsite showcasing your top customer references and marketing materials. The process is fully automated: your CRM triggers delivery, Deeto handles tracking, and prospects can explore testimonials, schedule reference calls, and engage with your SDR — all from the microsite.
+
+## How it works
+
+1. **CRM triggers** the microsite delivery at the right stage (e.g., after an SDR's initial call)
+2. **Prospect receives** a customized page with selected references and content
+3. **Prospect engages** — explores testimonials, schedules calls, or contacts the SDR
+4. **Deeto tracks** all engagement and notifies your team
+
+## Connecting to the right microsite
+
+Microsites are tailored to specific market segments, showcasing references that resonate with each segment's values and needs. Your CRM team should implement logic to direct prospects to the correct microsite based on their segment.
+
+**Example:** If a prospect is interested in enterprise solutions, the CRM should direct them to a microsite featuring enterprise customer testimonials.
+
+## The API
+
+Deeto provides an API to trigger microsite delivery. The key components:
+
+- **Contact Information** — Prospect's name and email address
+- **Microsite Name** — Identifies which microsite to share (you can have multiple for different segments)
+- **Optional SDR Details** — Name, photo, and personal message for a personalized experience
+
+## Setting up CRM triggers
+
+The API call can be initiated from your CRM, marketing automation platforms, your own product, or any system that manages customer data.
+
+<Tip>For Salesforce trigger examples, refer to the [Salesforce campaign automation guide](/integrations/sfdc-campaigns). Similar triggers can be set up in HubSpot or other systems.</Tip>
+
+## Prospect-to-SDR interaction
+
+Deeto supports two call-to-action options on microsites:
+
+| Option | What it does |
+|--------|-------------|
+| **Contact SDR** | Sends a note as an email message to the SDR |
+| **Schedule a Call** | Directs the prospect to a scheduling app |
+
+To enable scheduling, provide a **scheduling link** associated with the SDR featured on the microsite.
+
+## Setting up SDR details
+
+To enhance personalization, ensure each SDR is properly configured in Deeto:
+
+- **Profile Setup** — Name, photo, and contact details
+- **Bio and Personal Message** — A short bio to build rapport with prospects
+
+If no SDR details are provided, the microsite defaults to a static SDR as set during initial setup.
+
+## Support
+
+For setup help or API questions, contact [support@deeto.ai](mailto:support@deeto.ai) or your Deeto CSM.

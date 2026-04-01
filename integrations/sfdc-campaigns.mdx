@@ -1,0 +1,112 @@
+---
+title: "Salesforce campaign automation"
+description: "Configure Salesforce flows to automatically enroll contacts into Deeto campaigns based on CRM events."
+---
+
+{/* Source: https://www.notion.so/31bcbf8837ec810cb9b9e5a2896bfab3 */}
+{/* Migrated: 2026-04-01 from Deeto Docs Hub Tracker */}
+
+Automatically send "signals" from Salesforce to Deeto to enroll contacts into campaigns based on lifecycle events — like closed-won deals, renewals, or positive NPS scores.
+
+## The power of signals
+
+Your CRM tracks progression of prospects through the sales funnel and beyond as customers. During this journey, events occur — these can be translated into triggering events or "signals". By creating a Salesforce Flow, you capture these signals and pass contacts to Deeto campaigns via a callout action.
+
+**Example signals:**
+- Opportunity closed-won or closed-lost
+- Contract renewal
+- Positive NPS score received
+- Post-onboarding milestone reached
+
+## Prerequisites
+
+Before setting up automation, you need:
+
+- [Salesforce integration](/integrations/salesforce) installed and configured
+- Admin access to Salesforce Setup
+- A Deeto API key (provided by your CSM)
+- At least one active Deeto campaign to enroll contacts into
+
+## Step 1: Named credential setup
+
+You must set up named credentials to access the Deeto CRM API.
+
+<Steps>
+  <Step title="Create external credentials">
+    In Salesforce Setup, search for **Named Credentials**. Select **External Credentials** and click **New**. Fill in Label and Name, choose **Custom** Authentication Protocol, and click Save.
+  </Step>
+  <Step title="Add API key header">
+    In the **Custom Headers** section, click **New**. Create a header with name `X-Deeto-API-Key` and enter the API key value provided by Deeto (64 characters long). Click Save.
+  </Step>
+  <Step title="Create a principal">
+    In the **Principals** section, click **New** and configure.
+  </Step>
+  <Step title="Create named credential">
+    Go back to the **Named Credentials** tab. Click **New**, fill in information, and **uncheck** "Generate Authorization Header".
+  </Step>
+</Steps>
+
+## Step 2: Permission setup
+
+<Steps>
+  <Step title="Create permission set">
+    In Setup, go to **Permission Sets → New**. Enter the details and click Save.
+  </Step>
+  <Step title="Add external credential access">
+    Click **External Principal Access → Edit**. Add the credential and Save.
+  </Step>
+  <Step title="Assign users">
+    Click **Manage Assignments → Add Assignment**. Select users who can use the Deeto CRM API in automation flows.
+  </Step>
+</Steps>
+
+## Step 3: Create the automation flow
+
+This example creates a flow that enrolls opportunity contacts into Deeto campaigns 5 days after close date — routing to different campaigns based on whether the deal was won or lost.
+
+### Planning considerations
+
+Before building, decide:
+
+- Should you filter opportunity contact roles to only add a subset?
+- Should you broaden to all contacts from the opportunity account?
+- Are there other conditions that determine which contacts should be enrolled?
+
+### Flow creation
+
+<Steps>
+  <Step title="Create a Record-Triggered Flow">
+    In Setup, go to **Flows → New Flow → Record-Triggered Flow**. Configure the start element to process **Opportunity** and add a scheduled path.
+  </Step>
+  <Step title="Create the HTTP Callout action">
+    Under the scheduled path, click **+ → Action → Create HTTP Callout**. Select the named credential created above. Set Method and URL Path to `/v1/salesforce/update2`.
+  </Step>
+  <Step title="Configure request/response">
+    Add the sample JSON request and response as described in the Deeto documentation. This constructs the Deeto callout action.
+  </Step>
+  <Step title="Build the flow logic">
+    - Get related account and opportunity contact roles
+    - Loop through each contact role
+    - Determine if closed-won or closed-lost
+    - Set the appropriate Deeto campaign ID
+    - Execute the Deeto callout action for each contact
+  </Step>
+  <Step title="Save and activate">
+    Save the flow and activate it. Contacts will be automatically enrolled 5 days after opportunity close.
+  </Step>
+</Steps>
+
+<Note>The callout action construction is required for any flow that enrolls a contact into a Deeto Campaign. Once built, you can reuse it across multiple flows.</Note>
+
+## Flow recommendations
+
+| Program goal | Recommended trigger |
+|-------------|-------------------|
+| Positive feedback & marketing collateral | Recent positive NPS scores |
+| New customer feedback | Time-based (e.g., 90 days post-signing) |
+| Long-term feedback | Time-based (e.g., post-renewal) |
+| Win-loss analysis | Opportunity closed-won or closed-lost |
+
+---
+
+Questions? Reach out to your Deeto CSM or contact [support@deeto.ai](mailto:support@deeto.ai).

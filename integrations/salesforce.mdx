@@ -1,8 +1,83 @@
 ---
 title: "Salesforce"
-description: "Sync Deeto with Salesforce CRM."
+description: "Install and configure the Deeto Salesforce integration — package installation, field mapping, and permissions."
 ---
 
-Connect Deeto to Salesforce to surface references inside your deals and automate reference requests from your sales team.
+{/* Source: https://www.notion.so/311cbf8837ec81b0ade6c953c3bc96a0 */}
+{/* Migrated: 2026-04-01 from Deeto Docs Hub Tracker */}
 
-<Note>This page is coming soon. Content is being prepared.</Note>
+Integrating Deeto with Salesforce allows you to surface references inside opportunities, enable reference invitations directly from Salesforce, trigger campaigns from lifecycle events, and track reference outcomes.
+
+For end-user training, see the [Salesforce Training Guide](/integrations/salesforce-training). For campaign automation, see the [SFDC Campaign Enrollment Guide](/integrations/sfdc-campaigns).
+
+## Prerequisites
+
+- Active Salesforce org (sandbox or production)
+- Salesforce Admin access
+- Active Deeto workspace with Admin access
+
+## Installation steps
+
+<Steps>
+  <Step title="Get your installation URL">
+    Log in to Deeto as an administrator. Navigate to **Settings → Integrations → Salesforce**. Your Deeto CSM will provide a customized installation link.
+  </Step>
+  <Step title="Install the package">
+    Paste the URL into your browser while logged in to Salesforce. Select **Production** or **Sandbox** (sandbox recommended for first install). Review package contents and click **Install**.
+  </Step>
+  <Step title="Configure field mappings">
+    After installation, navigate to **Deeto Settings → Integration → Field Mapping**. Map Salesforce fields to Deeto:
+    - Contact fields (name, email, company, industry)
+    - Account fields (company name, industry, size)
+    - Opportunity fields (stage, amount, close date)
+  </Step>
+  <Step title="Assign permissions">
+    Go to **Setup → Users → Permission Sets**. Find the **Deeto User** permission set. Click **Manage Assignments** and assign to relevant users.
+  </Step>
+  <Step title="Enable Deeto tabs">
+    Go to **Setup → App Manager**. Create or edit an app to include the **Deeto** tab. Save and assign to relevant users.
+  </Step>
+  <Step title="Configure the connected app">
+    Navigate to **Setup → Apps → Connected Apps → Manage Connected Apps**. Find "Deeto", review OAuth scopes, and approve if prompted.
+  </Step>
+  <Step title="Test the integration">
+    Open an Opportunity in Salesforce. Click the **Deeto** tab. You should see reference options. Try inviting a prospect to verify reference matches appear.
+  </Step>
+</Steps>
+
+## Key features after installation
+
+### Deeto tab in Opportunities
+
+- View recommended references for your prospect
+- Invite prospects to connect with references
+- Track reference call status and outcomes
+- Access customer proof and testimonials
+
+### Deeto tab in Accounts
+
+- View all references associated with the account
+- Track engagement and participation
+- Schedule reference calls
+- Access customer contribution history
+
+### Campaign triggering
+
+- Set up Salesforce Flows to trigger Deeto campaigns automatically
+- Enroll contacts based on opportunity status
+- Collect feedback at key lifecycle moments
+
+## Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| Deeto tab not appearing | Verify the app is enabled, the tab is in your app layout, and your user has the permission set |
+| Field mapping issues | Review mappings in Deeto Settings. Verify API names and data types match |
+| References not appearing | Verify you have references in Deeto. Check contact/account matching criteria |
+
+## Next steps
+
+1. [Train your sales team](/integrations/salesforce-training) on using the Deeto tabs
+2. [Set up Flows](/integrations/sfdc-campaigns) to automatically trigger campaigns
+3. Populate your Knowledge Hub with references
+4. Monitor reference engagement metrics

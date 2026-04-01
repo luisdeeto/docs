@@ -1,8 +1,117 @@
 ---
 title: "HubSpot"
-description: "Sync Deeto with HubSpot CRM."
+description: "Connect Deeto to HubSpot — two-way sync, reference matching in deals, and campaign automation."
 ---
 
-Connect Deeto to HubSpot to sync customer data, track reference activity in deals, and automate advocate outreach.
+{/* Source: https://www.notion.so/311cbf8837ec81548e44ec267b820ef1 (Setup Guide) */}
+{/* Source: https://www.notion.so/312cbf8837ec81fba350d86f2e34aa1f (Technical Document) */}
+{/* Migrated: 2026-04-01 from Deeto Docs Hub Tracker */}
 
-<Note>This page is coming soon. Content is being prepared.</Note>
+Integrating Deeto with HubSpot allows you to sync customer data, surface references within deals, trigger campaigns from lifecycle events, and track reference activity — all without leaving HubSpot.
+
+## What you get
+
+- **Two-way sync** — All information automatically synced between Deeto and HubSpot
+- **References in deals** — View recommended references directly in deal records
+- **Campaign triggering** — Automatically send reference invitations based on lifecycle events
+- **Activity tracking** — Deeto reference activity appears in HubSpot timeline
+
+## Prerequisites
+
+- Active HubSpot account with Admin access
+- Active Deeto workspace with Admin access
+
+## Integration steps
+
+<Steps>
+  <Step title="Access the HubSpot integration">
+    Log in to Deeto as an administrator. Navigate to **Settings → Integrations**. Find **HubSpot** and click **Connect**.
+  </Step>
+  <Step title="Authorize Deeto">
+    You'll be redirected to HubSpot. Log in with your Admin account, review permissions, and click **Connect App**. You'll be redirected back to Deeto.
+  </Step>
+  <Step title="Configure data mapping">
+    In the HubSpot integration settings:
+    - **Contact Fields** — Map HubSpot contact properties to Deeto
+    - **Deal Fields** — Map deal properties for reference matching
+    - **Company Fields** — Map company properties
+    - Configure sync frequency (real-time or scheduled)
+  </Step>
+  <Step title="Test the integration">
+    Create a test contact or deal in HubSpot. Verify it syncs to Deeto. Confirm data appears in the Knowledge Hub. Test creating a reference in Deeto and verify it appears in HubSpot.
+  </Step>
+  <Step title="Train your team">
+    Show your team where Deeto data appears in HubSpot records. Walk through a sample reference matching workflow.
+  </Step>
+</Steps>
+
+## Key features after integration
+
+### References in HubSpot deals
+
+- View recommended references for prospects directly in deal records
+- Access customer proof points and testimonials
+- Schedule reference calls without leaving HubSpot
+
+### Sync capabilities
+
+- HubSpot contacts automatically appear as prospects or references in Deeto
+- Updated data syncs both ways (company name, industry, size, etc.)
+- Deeto reference activity appears in HubSpot activity timeline
+
+### Campaign triggering
+
+- Automatically send reference invitations based on HubSpot lifecycle events
+- Trigger content collection campaigns when deals close
+- Use HubSpot workflows to enroll customers in Deeto campaigns
+
+## Technical details
+
+### What data syncs
+
+- Deeto **reads** from Contact, Deal, and Company objects
+- Deeto **writes** to the Ticket object and dedicated custom fields on Company, Contact, and Deal objects
+- Deeto treats HubSpot as the source of truth — it will not overwrite existing field values
+
+### Sync schedule
+
+- Most events are handled on demand (when a user opens the Deeto tab or a mapped field changes)
+- One scheduled sync job runs daily to ensure consistency
+
+### How Deeto writes back
+
+| Event | What Deeto writes |
+|-------|------------------|
+| Contact becomes a reference | Updates "Deeto Id" on Contact and Company tables |
+| Lead created | Adds a record to the Contact table |
+| Prospect connected to reference | Updates "Deeto Id" on the Deal table |
+| Prospect-reference interaction | Creates a Ticket with Deeto_Id, Deeto_Status, and Deeto_type fields |
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="What is the authentication flow?">
+    During installation, you'll approve an evergreen authentication via OAuth. No API keys needed.
+  </Accordion>
+  <Accordion title="Is it real-time or scheduled?">
+    Most events are handled on demand. One daily scheduled job ensures sync completeness.
+  </Accordion>
+  <Accordion title="Why does the app request delete permissions?">
+    HubSpot does not distinguish between write, update, and delete permissions. Requesting write permissions automatically includes delete and update. Deeto does not delete HubSpot data.
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| Data not syncing | Verify the integration is active in Settings. Check field mappings. |
+| Missing references in deals | Verify you have references in Deeto. Check matching criteria. |
+| Connection lost | Go to Settings → Integrations → HubSpot → Reconnect. |
+
+## Next steps
+
+1. Populate your Knowledge Hub with references
+2. Train your sales team on using references in HubSpot
+3. Set up campaigns to trigger from HubSpot lifecycle events
+4. Monitor reference matching and engagement metrics

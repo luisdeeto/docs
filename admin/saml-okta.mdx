@@ -1,0 +1,61 @@
+---
+title: "Configure SAML with Okta"
+description: "Step-by-step guide to configuring SAML single sign-on between Deeto and Okta."
+---
+
+{/* Source: https://www.notion.so/31bcbf8837ec81a19433fb18413b64a0 */}
+{/* Migrated: 2026-04-01 from Deeto Docs Hub Tracker */}
+
+This guide walks you through configuring SAML 2.0 single sign-on between Deeto and Okta.
+
+<Note>Only existing users on Deeto will be authenticated via SAML. Deeto does not create vendor users when coming from SAML.</Note>
+
+## Prerequisites
+
+- Okta admin dashboard access
+- Entity ID from Deeto (a GUID provided by your Deeto CSM)
+
+## Setup steps
+
+<Steps>
+  <Step title="Sign in to Okta admin">
+    Sign in to your Okta admin dashboard.
+  </Step>
+  <Step title="Create app integration">
+    Go to **Menu → Applications → Applications**. Click **Create App Integration → SAML 2.0** and click "Next". Enter the app name: **Deeto**. Optionally upload the Deeto icon. Click **Next**.
+  </Step>
+  <Step title="Configure SAML details">
+    On the **Configure SAML** details page, under **General**:
+    - **Single sign on URL:** `https://api.deeto.ai/v1/saml/{entityID}` (replace `{entityID}` with the GUID from Deeto)
+    - **Audience URI:** Same entity ID
+    - **Name ID format:** EmailAddress
+    - Leave everything else in General unchanged
+  </Step>
+  <Step title="Add attribute statements">
+    In the **Attribute Statements** section, add these 3 attributes:
+
+    | Name | Format | Value |
+    |------|--------|-------|
+    | `email` (lowercase) | Unspecified | `user.email` |
+    | `firstName` (lowercase f, capital N) | Unspecified | `user.firstName` |
+    | `lastName` (lowercase l, capital N) | Unspecified | `user.lastName` |
+  </Step>
+  <Step title="Preview and continue">
+    Click **Preview the SAML assertion** to verify. Click **Next**.
+  </Step>
+  <Step title="Complete feedback page">
+    On the Feedback page, select "This is an internal app that we have created". Click **Finish**.
+  </Step>
+  <Step title="Assign users">
+    Under the Deeto application page, go to the **Assignments** tab. Choose the users that will have access to the Deeto application.
+  </Step>
+  <Step title="Share metadata with Deeto">
+    Click on **View SAML Setup instructions** under the "About" section. Find the section that says "IDP metadata to your SP Provider". Copy the whole text from the textbox and share it with Deeto.
+  </Step>
+</Steps>
+
+## Testing
+
+After setup, go to your application board in Okta and click on **Deeto** to test the SSO flow.
+
+<Warning>Only existing Deeto users will be authenticated. If a user doesn't exist in Deeto, SAML login will not create them automatically.</Warning>

@@ -17,19 +17,33 @@
             "group": "Getting started",
             "pages": [
               "index",
-              "quickstart"
+              "quickstart",
+              "getting-started"
             ]
           },
           {
             "group": "Campaigns",
             "pages": [
-              "campaigns/overview"
+              "campaigns/overview",
+              "campaigns/content-generation"
             ]
           },
           {
             "group": "Knowledge Hub",
             "pages": [
               "knowledge-hub/overview"
+            ]
+          },
+          {
+            "group": "Research Hub",
+            "pages": [
+              "research/best-practices"
+            ]
+          },
+          {
+            "group": "AI Assistant",
+            "pages": [
+              "ai-assistant/best-practices"
             ]
           },
           {
@@ -47,7 +61,8 @@
           {
             "group": "Publishing",
             "pages": [
-              "publishing/website-widget"
+              "publishing/website-widget",
+              "publishing/widget-best-practices"
             ]
           }
         ]
@@ -59,13 +74,26 @@
             "group": "CRM",
             "pages": [
               "integrations/hubspot",
-              "integrations/salesforce"
+              "integrations/salesforce",
+              "integrations/salesforce-training"
             ]
           },
           {
             "group": "Revenue intelligence",
             "pages": [
               "integrations/gong"
+            ]
+          },
+          {
+            "group": "Reviews",
+            "pages": [
+              "integrations/g2"
+            ]
+          },
+          {
+            "group": "Campaign automation",
+            "pages": [
+              "integrations/sfdc-campaigns"
             ]
           }
         ]
@@ -77,8 +105,21 @@
             "group": "Account",
             "pages": [
               "admin/settings",
+              "admin/branding",
               "admin/team-management",
               "admin/billing"
+            ]
+          },
+          {
+            "group": "Security",
+            "pages": [
+              "admin/saml-okta"
+            ]
+          },
+          {
+            "group": "Analytics",
+            "pages": [
+              "admin/platform-performance"
             ]
           }
         ]

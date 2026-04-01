@@ -1,8 +1,141 @@
 ---
 title: "Website widget"
-description: "Embed customer references directly on your website."
+description: "Install and configure the Deeto website widget to display customer testimonials and social proof on your site."
 ---
 
-The website widget lets you display customer testimonials, case studies, and references on your own website without any manual updates.
+{/* Source: https://www.notion.so/312cbf8837ec81f3872ed6c744ef4c9c */}
+{/* Source: https://www.notion.so/311cbf8837ec811e830bd5ce67c023d0 */}
+{/* Migrated: 2026-04-01 from Deeto Docs Hub Tracker */}
 
-<Note>This page is coming soon. Content is being prepared.</Note>
+The Deeto Widget displays customer-generated content (quotes, testimonials, case studies, video testimonials) on your website. It's customizable to match your brand and can be placed on any page where you want to showcase customer proof.
+
+For optimization strategies, see [Widget Best Practices](/publishing/widget-best-practices).
+
+## Before you start
+
+You'll need:
+
+- Access to your website's backend or a website builder
+- Deeto workspace with admin access
+- Customer content ready to display (quotes, testimonials, case studies)
+
+## Step 1: Prepare your content
+
+1. Log in to your Deeto workspace
+2. Navigate to **Assets → Knowledge Hub**
+3. Ensure you have customer content to display
+4. Mark content as "Approved for public use" if not already
+
+## Step 2: Create your widget
+
+1. Go to **Assets → Widgets**
+2. Click **Create New Widget**
+3. Name your widget (e.g., "Homepage Testimonials" or "Product Page Proof")
+4. Select which content to display:
+   - Choose testimonials/quotes to include
+   - Filter by customer segment if desired
+   - Select number of items to display
+5. Configure display settings:
+   - **Layout:** Carousel, grid, or single
+   - **Rotation:** Auto-rotate on/off, rotation speed
+   - **Styling:** Colors, fonts, sizing
+6. Save your widget
+
+## Step 3: Get your embed code
+
+1. From the Widgets list, find your widget
+2. Click **Get Embed Code**
+3. Copy the entire code snippet
+
+## Step 4: Install on your website
+
+<Tabs>
+  <Tab title="Website builder">
+    **Webflow, Squarespace, etc.**
+
+    1. Open your website builder
+    2. Navigate to the page where you want the widget
+    3. Add an **Embed** or **Custom Code** block
+    4. Paste the Deeto widget code
+    5. Save and publish
+  </Tab>
+  <Tab title="WordPress">
+    1. Log in to your WordPress dashboard
+    2. Go to the page/post where you want the widget
+    3. Add a **Custom HTML** block (not regular text)
+    4. Paste the Deeto widget code
+    5. Publish the page
+  </Tab>
+  <Tab title="Direct HTML">
+    1. Open your website's HTML or code editor
+    2. Find the page where you want the widget
+    3. Paste the widget code where you want it to appear
+    4. Save and deploy
+  </Tab>
+  <Tab title="CMS / Custom">
+    Most modern platforms have an "Embed" or "HTML" option. Consult your CMS documentation for embedding external content, then paste the Deeto widget code.
+  </Tab>
+</Tabs>
+
+## Step 5: Verify installation
+
+1. Visit your website page
+2. Refresh the browser (clear cache if needed)
+3. Confirm the widget appears
+4. Test on mobile and desktop
+5. Click through testimonials to ensure functionality
+
+## Step 6: Customize appearance
+
+If the widget doesn't match your branding:
+
+1. Return to **Assets → Widgets** in Deeto
+2. Click your widget → **Styling**
+3. Adjust: background color, text color, font, border, button colors
+4. Save — changes appear on your website within minutes
+
+## Customization options
+
+### Styling
+- Widget layout (carousel, grid, list)
+- Colors (background, text, accent)
+- Typography (fonts and sizes)
+- Dimensions and spacing
+
+### Content
+- Filter by customer segment, industry, or use case
+- Choose content types (quotes, testimonials, case studies, videos)
+- Set rotation speed for carousel widgets
+- Include or exclude customer logos
+
+### Behavior
+- Auto-rotation on/off
+- Click-through behavior (modal, new tab, link)
+- Load animations
+- Interaction tracking
+
+## Placement recommendations
+
+| Page | What to display |
+|------|----------------|
+| **Homepage** | Rotating mix of high-level testimonials and success stories |
+| **Product pages** | Testimonials specific to that product or feature |
+| **Pricing page** | Customer quotes about ROI and value |
+| **Case studies page** | Link from widget quotes to full case studies |
+
+## Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| Widget not appearing | Verify embed code was fully copied. Check published version. Clear browser cache. Check console for errors (F12). |
+| Content not showing | Ensure published content exists in Deeto. Verify content is marked "Approved for public use". Check widget filters. |
+| Styling issues | Review widget styling settings. Check for CSS conflicts with your website theme. |
+| Performance issues | Widget loads asynchronously — it shouldn't slow your page. Content is cached. If delays persist, contact support. |
+
+## Updating your widget
+
+To change displayed content:
+
+1. Go to **Assets → Widgets** in Deeto
+2. Edit the content selection
+3. Save — changes appear on your website within minutes (no re-embedding needed)
