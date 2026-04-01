@@ -167,5 +167,8 @@
   },
   "appearance": {
     "strict": true
+  },
+  "metadata": {
+    "timestamp": true
   }
 }
