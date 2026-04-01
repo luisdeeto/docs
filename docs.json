@@ -153,12 +153,7 @@
     "href": "https://www.deeto.com/"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@deeto.ai"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
       "label": "Go to Deeto",
